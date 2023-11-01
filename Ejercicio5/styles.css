@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#biografia {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    padding: 20px;
+}
+.ficha-biografica {
+    background-color: var(--fondo);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    display: block;
+    max-width: 250px;
+    float: right;
+    margin: 0 0 30px 30px;
+}
+.ficha-biografica .ficha-contenido p span.titulo{
+    font-weight: 700;
+}

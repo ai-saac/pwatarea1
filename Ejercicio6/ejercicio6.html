@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 90%;
+            height: 500px;
+            background-color: #ccc;
+            border: 2px solid rgb(65, 4, 233);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider {
+            width: 50%;
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 80%;
+            transition: all 0.5s ease;
+        }
+
+        .slider input[type="range"] {
+            width: 80%;
+            position: top;
+            bottom: 1;
+            opacity: 1;
+        }
+        p { 
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <input type="range" min="1" max="5" value="1" id="slider">
+            <img src="imagen1.jpg" alt="">
+            <p>ESTE ES MI SLIDER</p>
+        </div>
+    </div>
+    <script>
+        let slider = document.getElementById('slider');
+        slider.oninput = function() {
+            slider.nextElementSibling.src = 'imagen' + this.value + '.jpg';
+        }
+    </script>
+</body>
+</html>
